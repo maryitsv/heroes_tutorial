@@ -22,7 +22,7 @@ prepare-install:
   tags:
     - docker
   script:
-    - npm install
+    - npm ci
 #  cache:
 #    key:
 #      files:
