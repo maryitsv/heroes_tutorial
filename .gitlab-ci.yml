@@ -23,6 +23,7 @@ prepare-install:
     - docker
   script:
     - npm ci
+    - ./node_modules/.bin/ng build --prod
 #  cache:
 #    key:
 #      files:
@@ -40,7 +41,6 @@ prepare-install:
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - ./node_modules/.bin/ng build --prod
     - echo "Compile complete."
 
 unit-test-job:   # This job runs in the test stage.
