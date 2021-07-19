@@ -23,18 +23,18 @@ prepare-install:
     - docker
   script:
     - npm install
-  cache:
-    key:
-      files:
-        - package-lock.json
-    paths:
-      - node_modules
-  only:
-    refs:
-      - merge_requests
-      - master
-    changes:
-      - package-lock.json
+#  cache:
+#    key:
+#      files:
+#        - package-lock.json
+#    paths:
+#      - node_modules
+#  only:
+#    refs:
+#      - merge_requests
+#      - master
+#    changes:
+#      - package-lock.json
 
 
 build-job:       # This job runs in the build stage, which runs first.
